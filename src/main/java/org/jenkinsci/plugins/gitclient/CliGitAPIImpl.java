@@ -781,9 +781,9 @@ public class CliGitAPIImpl extends LegacyCompatibleGitAPIImpl {
                 if (out==null)  throw new IllegalStateException();
 
                 try {
-		    // "git whatchanged" std output gives us byte stream of data
-		    // Commit messages in that byte stream are UTF-8 encoded.
-		    // We want to decode bytestream to strings using UTF-8 encoding.
+                    // "git whatchanged" std output gives us byte stream of data
+                    // Commit messages in that byte stream are UTF-8 encoded.
+                    // We want to decode bytestream to strings using UTF-8 encoding.
 
                     WriterOutputStream w = new WriterOutputStream(out, Charset.forName("UTF-8"));
                     try {
